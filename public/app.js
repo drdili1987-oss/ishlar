@@ -96,8 +96,13 @@ async function onGoogleCredential(resp){
   const { error } = await sb.auth.signInWithIdToken({ provider: 'google', token: resp.credential, nonce: rawNonce });
   if (error) { $('#loginErr').textContent = error.message; renderGsi(); }
 }
+// Telefonda (ayniqsa Telegram/Instagram ichki brauzerida) Google popup oq ekranda qotib qoladi.
+// Shuning uchun mobil qurilmalarda popup o'rniga redirect (to'liq sahifa) orqali kiramiz.
+const IS_MOBILE = /Android|iPhone|iPad|iPod|Mobile|FBAN|FBAV|Instagram|Telegram|Line\//i.test(navigator.userAgent)
+  || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 async function renderGsi(){
   const slot = $('#gsiBtn');
+  if (IS_MOBILE) { slot.hidden = true; $('#googleBtn').hidden = false; return; }
   if (!window.google?.accounts?.id) {
     if (++gsiWait > 30) { slot.hidden = true; $('#googleBtn').hidden = false; return; }
     return setTimeout(renderGsi, 200);

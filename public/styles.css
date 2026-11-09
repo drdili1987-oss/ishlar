@@ -267,3 +267,5 @@ a{color:inherit}
   .projgrid{grid-template-columns:1fr}
   .widgets{grid-template-columns:1fr}
 }
+
+.gbtn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:10px 22px;min-width:260px;font-size:15px}
