@@ -131,7 +131,7 @@ async function handleSession(session){
   show('loading');
   const meta = user.user_metadata || {};
   S.profiles[user.id] = { id: user.id, email: user.email, full_name: meta.full_name || meta.name, avatar_url: meta.avatar_url || meta.picture };
-  $('#meBtn').innerHTML = avatar(user.id, 'av lg');
+  $('#meAv').innerHTML = avatar(user.id, 'av lg');
   $('#meWho').innerHTML = `${esc(displayName(S.profiles[user.id]))}<small>${esc(user.email)}</small>`;
   await loadProjects();
   await loadInbox();

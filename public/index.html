@@ -6,7 +6,7 @@
 <title>Ishlar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="styles.css?v=1">
+<link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
 <div class="loading" id="viewLoading"><div class="spin" aria-label="Yuklanmoqda"></div></div>
@@ -32,13 +32,15 @@
     </nav>
     <div class="side-h"><span>Loyihalar</span><button class="icon-btn light" id="newProjectBtn" aria-label="Yangi loyiha">+</button></div>
     <nav class="nav" id="projectNav"></nav>
+    <div class="side-me">
+      <div class="menu" id="meMenu" hidden><button id="logoutBtn">Chiqish</button></div>
+      <button class="me" id="meBtn" aria-label="Profil"><span id="meAv"></span><span id="meWho" class="me-who"></span><span class="me-dots">⋯</span></button>
+    </div>
   </aside>
   <div class="main">
     <header class="topbar">
       <button class="icon-btn" id="sideOpen" aria-label="Menyu">☰</button>
       <div class="search"><input id="searchInput" type="search" placeholder="Qidirish" autocomplete="off"><div class="search-res" id="searchRes" hidden></div></div>
-      <button class="me" id="meBtn" aria-label="Profil"></button>
-      <div class="menu" id="meMenu" hidden><div class="who" id="meWho"></div><button id="logoutBtn">Chiqish</button></div>
     </header>
     <div class="content" id="content"></div>
   </div>
@@ -51,6 +53,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="config.js?v=1"></script>
-<script src="app.js?v=1"></script>
+<script src="app.js?v=2"></script>
 </body>
 </html>
