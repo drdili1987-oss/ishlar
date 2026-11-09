@@ -76,7 +76,7 @@ a{color:inherit}
 .me:hover{background:var(--side-hover)}
 .me-who{flex:1;min-width:0;font-weight:500;line-height:1.25;overflow:hidden}.me-who small{display:block;color:var(--side-mut);font-weight:400;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .me-dots{color:var(--side-mut)}
-.side-me .menu{left:0;right:0;bottom:60px;top:auto}
+.side-me .menu{left:0;right:0;bottom:64px;top:auto;color:var(--ink)}
 .menu{position:absolute;background:var(--bg);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);z-index:40;min-width:220px;padding:6px}
 .menu .who{padding:8px 10px;font-weight:600}.menu .who small{display:block;color:var(--mut);font-weight:400}
 .menu button{display:block;width:100%;text-align:left;border:0;background:none;padding:8px 10px;border-radius:6px}
