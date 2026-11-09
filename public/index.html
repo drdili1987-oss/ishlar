@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ishlar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+<div class="loading" id="viewLoading"><div class="spin" aria-label="Yuklanmoqda"></div></div>
+
+<section class="login" id="viewLogin" hidden>
+  <div class="login-card">
+    <div class="brand big"><span class="dots"><i></i><i></i><i></i></span>Ishlar</div>
+    <p>Jamoa vazifalari, loyihalar va muddatlar — bitta joyda. Davom etish uchun Google hisobingiz bilan kiring.</p>
+    <div id="gsiBtn" class="gsi-slot"></div>
+    <button class="btn" id="googleBtn" type="button" hidden>Google bilan kirish</button>
+    <div class="err" id="loginErr" role="alert"></div>
+  </div>
+</section>
+
+<div id="viewApp" class="app" hidden>
+  <aside class="side" id="side">
+    <div class="side-top"><button class="icon-btn light" id="sideToggle" aria-label="Menyuni yopish">☰</button><div class="brand"><span class="dots"><i></i><i></i><i></i></span>Ishlar</div></div>
+    <button class="create" id="createBtn"><span>+</span> Yaratish</button>
+    <nav class="nav">
+      <a href="#/home" data-nav="home">⌂ <span>Bosh sahifa</span></a>
+      <a href="#/my" data-nav="my">✓ <span>Mening vazifalarim</span></a>
+      <a href="#/inbox" data-nav="inbox">✉ <span>Kiruvchi</span><b class="badge" id="inboxBadge" hidden></b></a>
+    </nav>
+    <div class="side-h"><span>Loyihalar</span><button class="icon-btn light" id="newProjectBtn" aria-label="Yangi loyiha">+</button></div>
+    <nav class="nav" id="projectNav"></nav>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <button class="icon-btn" id="sideOpen" aria-label="Menyu">☰</button>
+      <div class="search"><input id="searchInput" type="search" placeholder="Qidirish" autocomplete="off"><div class="search-res" id="searchRes" hidden></div></div>
+      <button class="me" id="meBtn" aria-label="Profil"></button>
+      <div class="menu" id="meMenu" hidden><div class="who" id="meWho"></div><button id="logoutBtn">Chiqish</button></div>
+    </header>
+    <div class="content" id="content"></div>
+  </div>
+  <aside class="pane" id="pane" hidden></aside>
+</div>
+
+<div class="modal-back" id="modal" hidden><div class="modal" role="dialog" aria-modal="true" id="modalBody"></div></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="config.js?v=1"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>
